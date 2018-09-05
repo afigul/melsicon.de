@@ -9,12 +9,12 @@
 
   "hero": {
     "heading": "Experten für kundenspezifische Lösungen",
-    "description": "Wir sind Ihr IT-Partner, der ihnen hilft sich Ihre Kernkompetenz zu konzentrieren."
+    "description": "Wir sind Ihr IT-Partner, der ihnen hilft sich auf Ihre Kernkompetenz zu konzentrieren."
   },
 
   "services": {
     "heading": "Unser Angebot",
-    "paragraphs": ["Unser Fokus liegt in der Softwareentwicklung im Banken- und Transportwesen im Rhein-Main-Gebiet. Dabei ist unsere Motivation die Anforderungen unserer Kunden zu verstehen und maßgeschneiderte Beratung anzubieten. In der Softwarelösungen heißt dass für uns aus einer Hand mit Sicht aufs Ganze.", "Unsere Stärken liegen in der agilen Entwicklung, Testmanagement, DevOps, Cloud Engineering sowie alles rund um Java. Hierbei begleiten wir Ihnen von der Konzeptionierung über die Entwicklung bis hin zum Betrieb."],
+    "paragraphs": ["Unser Fokus liegt in der Softwareentwicklung im Banken- und Transportwesen im Rhein-Main-Gebiet. Unser Ziel ist es eine maßgeschneiderte Softwarelösung zu liefern und bei der Integration in das bestehende System zu unterstützen.", "Unsere Stärken liegen in der agilen Entwicklung, Testmanagement, DevOps, Cloud Engineering sowie alles rund um Java. Hierbei begleiten wir Ihnen von der Konzeptionierung über die Entwicklung bis hin zum Betrieb."],
     "bank": {
       "heading": "Finazdienstleister",
       "paragraphs": ["Viele Große Finanzdienstleister sehen seit Finanzkriese und Niedrigzinspolitik ihr Kerngeschäft auf den Kopf gestellt.",
@@ -30,8 +30,9 @@
   "about": {
     "company": {
       "heading": "Über uns",
-      "description": ["melsicon GmbH wurde 2012 von drei Informatik Absolventen der Universität Darmstadt gegründet. Die Gründung erfolgte aus dem Verlangen heraus Beratung menschlich, fair und professionell zu gestallten.",
-      "melsicon ist ein Kunstwort aus „melsi“ und „con“. Das Wort „melsi“ kommt aus dem eritreischen, dem Ursprungsland vom Geschäftsführer Makele Ghebreamlak, und bedeutet ‚Lösung‘. Das Wort „con“ ist die Abkürzung für Consulting. melsicon versteht sich als Lösungsorientiert Beratung"]
+      "description": ["Aus dem Verlangen heraus Beratung menschlich, fair und professionell zu gestalten haben wir 2012 die melsicon GmbH gegründet.",
+        "Wir verstehen uns als lösungsorientiertes Beratungsunternehmen. Dies macht schon unsere Firmanname deutlich: ", 
+      "melsicon ist ein Kunstwort aus „melsi“ und „con“. „melsi“ kommt aus Makeles Ursprungsland - Eritrea - und bedeutet ‚Lösung‘. „con“ ist die Abkürzung für Consulting. "]
     },
     "team": {
       "heading": "IT-Experten mit geballtem Wissen",
@@ -103,7 +104,7 @@
       },
       {
         "name": "Mina Dawlatzai",
-        "title": "Research Analyst",
+        "title": "Innovation and Strategy Research",
         "subtitle": "Researcher",
         "img": "../img/profiles/victoria1.jpg",
         "social": {
