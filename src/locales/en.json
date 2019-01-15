@@ -1,43 +1,43 @@
-{
+﻿{
   "nav": {
     "home": "Home",
-    "services": "Leistungen",
-    "team": "Über uns",
-    "careers": "Karriere",
-    "contact": "Kontakt"
+    "services": "Services",
+    "team": "About us",
+    "careers": "Careers",
+    "contact": "Contact"
   },
 
 "illustrations": {
   "hero": {
-    "desc": "Ein Team das gemeinsam an einem Dashboard für Transportdienstleistungen arbeiten.",
+    "desc": "A team collectivetly working on a dashboard for transportation services.",
     "src": "../img/illustrations/hero.svg"
   },
   "services": {
-    "desc": "Zwei Menschen die gemeinsam an einem Web-Dashboard für Banking arbeiten.",
+    "desc": "Two people working together on a web dashboard for banking.",
     "src": "../img/illustrations/services.svg"
   },
   "team": {
-    "desc": "Ein Team von vier Personen in einen Meeting.",
+    "desc": "A team of four peope in a meeting.",
     "src": "../img/illustrations/team.svg"
   },
   "careers": {
-    "desc": "Zwei Personen die sich nach einem Interview freundlich die Hand schütteln.",
+    "desc": "Two people shaking hands after an interview.",
     "src": "../img/illustrations/careers.svg"
   },
   "contact": {
-    "desc": "Eine Person die im Sitzen an ihrem Handy ist.",
+    "desc": "A person on their phone while sitting.",
     "src": "../img/illustrations/contact.svg"
   }
 },
 
   "hero": {
-    "heading": "Kundenspezifische Lösungen, von Experten entwickelt",
-    "desc": "Wir sind Ihr IT-Partner, der Ihnen hilft sich auf Ihre Kernkompetenz zu fokussieren."
+    "heading": "Customer specific solutions, developed by experts",
+    "desc": "We're the IT partner that will help you focus on your core competence."
   },
 
   "services": {
-    "heading": "Unser Angebot",
-    "desc": ["Unser Fokus liegt in der Softwareentwicklung im Banken- und Transportwesen im Rhein-Main-Gebiet. Unser Ziel ist es eine maßgeschneiderte Softwarelösung zu liefern und Sie bei der Integration in Ihr bestehendes System zu unterstützen.", "Unsere Stärken liegen in der agilen Entwicklung, Testmanagement, DevOps, Cloud Engineering sowie alles rund um Java. Hierbei begleiten wir Sie von der Konzeptionierung, über die Entwicklung bis hin zum Betrieb."],
+    "heading": "Our services",
+    "desc": ["Our focus is on software development for the banking and transportation sector in the Rhein-Main area. Our goal is to provide you with a customized software solution and to help you with the integreation into your existing system.", "Unsere Stärken liegen in der agilen Entwicklung, Testmanagement, DevOps, Cloud Engineering sowie alles rund um Java. Hierbei begleiten wir Sie von der Konzeptionierung, über die Entwicklung bis hin zum Betrieb."],
     "bank": {
       "heading": "Finanzdienstleister",
       "desc": ["Viele große Finanzdienstleister sehen seit der Finanzkrise und Niedrigzinspolitik ihr Kerngeschäft auf den Kopf gestellt. Wir helfen unseren Kunden innovative Konzepte in ihre bestehenden Systeme zu integrieren, wie zum Beispiel Roboadvisors und integrierte Cloud Lösung für alle Berater. Desweiteren helfen wir Ihnen dabei Regulatorien wie MiFID II und eine Beratung nach dem DEFINO Standard umzusetzen."]
@@ -102,7 +102,7 @@
       {
         "name": "Victoria Bergquist",
         "title": "Front-End Entwicklerin",
-        "subtitle": "Community Manager",
+        "subtitle": "Designerin, Community Manager",
         "img": "../img/profiles/victoria.jpg",
         "social": {
           "linkedin": "https://www.linkedin.com/in/victoriabergquist/",
@@ -140,14 +140,11 @@
         }
       },
       {
-        "name": "Meike Hankewicz",
-        "title": "Junior Software Entwicklerin",
-        "subtitle": "Back-End Entwicklerin (Java/JavaScript)",
-        "img": "../img/profiles/meike.jpg",
+        "name": "Mina Dawlatzai",
+        "title": "Researcher",
+        "subtitle": "Innovation & Strategy Research",
+        "img": "../img/profiles/mina.jpg",
         "social": {
-          "linkedin": "https://www.linkedin.com/in/meike-h/",
-          "github": "https://github.com/Schlenges",
-          "twitter": "https://twitter.com/meikewicz"
         }
       }
     ]
@@ -258,7 +255,7 @@
     "legal": {
       "heading": "Rechtliches",
       "imprint": "Impressum",
-      "privacy": "Datenschutz"
+      "data": "Datenschutz"
     },
     "quick": {
       "heading": "Schnelleinstieg",

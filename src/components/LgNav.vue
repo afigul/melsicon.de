@@ -2,8 +2,8 @@
     <div class="nav">
         <div class="lg-nav-wrapper">
             <scrollactive
-                v-if="$route.name !== 'imprint'"
-                :offset="50"
+                v-if="$route.name === 'home'"
+                :offset="0"
                 :modify-url="false"
                 class="lg-nav"
                 role="navigation">
@@ -12,8 +12,7 @@
                     :class="{'scrollactive-item': $route.name === 'home'}"
                     :href="'#' + key"
                     :key="nav.index"
-                    class="nav-link"
-                    role="menuitem">{{ nav }}</a>
+                    class="nav-link">{{ nav }}</a>
             </scrollactive>
             <nav
                 v-if="$route.name === 'imprint' || $route.name === 'privacy'"
@@ -22,18 +21,15 @@
                 <router-link
                     :class="{'is-active': $route.name === 'home'}"
                     to="/"
-                    class="nav-link"
-                    role="menuitem">{{ $t('nav.home') }}</router-link>
+                    class="nav-link">{{ $t('nav.home') }}</router-link>
                 <router-link
                     :class="{'is-active': $route.name === 'imprint'}"
                     to="/imprint"
-                    class="nav-link"
-                    role="menuitem">{{ $t('footer.legal.imprint') }}</router-link>
+                    class="nav-link">{{ $t('footer.legal.imprint') }}</router-link>
                 <router-link
                     :class="{'is-active': $route.name === 'privacy'}"
                     to="/privacy"
-                    class="nav-link"
-                    role="menuitem">{{ $t('footer.legal.data') }}</router-link>
+                    class="nav-link">{{ $t('footer.legal.privacy') }}</router-link>
             </nav>
             <the-logo/>
         </div>
@@ -41,7 +37,7 @@
 </template>
 
 <script>
-import TheLogo from '@/components/graphics/TheLogo'
+import TheLogo from '@/components/TheLogo'
 export default {
   name: 'Navigation',
   components: {
@@ -49,20 +45,11 @@ export default {
   },
   data: () => ({
     open: false
-  }),
-  methods: {
-    returnHome() {
-      if (this.$route.name !== 'home') {
-        this.$router.push('/')
-      }
-    }
-  }
+  })
 }
 </script>
 
 <style lang="sass" scoped>
-
-  // LARGE NAV STYLES
 
   .nav
     position: fixed
@@ -79,7 +66,7 @@ export default {
     width: 100%
     max-width: $normal-width
     margin: auto
-    padding: .5rem 2em
+    padding: .5rem 1em
     align-items: center
     @include x-large
       max-width: $large-width
@@ -107,12 +94,9 @@ export default {
     transition: transform .3s ease-in
     border-bottom: 1px solid $color-white
     transition: all .3s ease-in
-    @media only screen and (max-width: 1000px)
-      //margin-right: 2rem
 
   .is-active
     color: $color-primary
     font-weight: 600
-
 
 </style>

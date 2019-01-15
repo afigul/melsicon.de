@@ -3,13 +3,20 @@
         id="contact"
         class="section section-contact">
         <article class="article article-contact">
-            <illustration-contact
+            <!-- ILLUSTRATION ON MEDIUM SCREENS -->
+            <div
                 v-if="$mq === 'md'"
-                :class="{'illustration-medium': $mq === 'md'}"/>
+                :class="{'illustration-medium': $mq === 'md'}"
+                class="illustration illustration-contact">
+                <img
+                    v-lazy="$t('illustrations.contact.src')"
+                    :alt="$t('illustrations.contact.desc')">
+            </div>
+            <!-- CONTACT US -->
             <h2 class="heading heading-contact">{{ $t('contact.heading') }}</h2>
-            <p class="paragraph">{{ $t('contact.description1') }}</p>
+            <p>{{ $t('contact.desc[0]') }}</p>
             <i18n
-                path="contact.description2"
+                path="contact.desc[1]"
                 tag="p">
                 <span
                     class="email inline-link"
@@ -20,20 +27,24 @@
                     @click="openChat">{{ $t('contact.chat') }}</a>
             </i18n>
         </article>
-        <illustration-contact v-if="$mq === 'lg' || $mq === 'xs'"/>
+        <!-- ILLUSTRATION ON LARGE & XSMALL SCREENS -->
+        <div
+            v-if="$mq === 'lg' || $mq === 'xs'"
+            :class="{'illustration-medium': $mq === 'md'}"
+            class="illustration illustration-contact">
+            <img
+                v-lazy="$t('illustrations.contact.src')"
+                :alt="$t('illustrations.contact.desc')">
+        </div>
     </section>
 </template>
 
 <script>
-import IllustrationContact from '@/components/graphics/illustrations/IllustrationContact'
 export default {
-  components: {
-    IllustrationContact
-  },
   methods: {
     openChat() {
       window.drift.on('ready', api => {
-        api.sidebar.toggle()
+        api.showWelcomeOrAwayMessage()
       })
     }
   }
@@ -44,17 +55,16 @@ export default {
 
   .section-contact
     align-items: center
-    padding-top: 5em
-    padding-bottom: 10em
+    padding: 8em 0
     @include small
       padding: 2em 0
-
-  .illustration-contact
-    padding: 0 5em
-    @include small
-      padding: 0 3em
 
   .heading-contact
     hyphens: none
 
+  .illustration-contact
+    padding: 0 4em
+    margin: 2em 0
+    @include small
+      padding: 0 2em
 </style>

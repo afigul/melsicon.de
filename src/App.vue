@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import LgNav from '@/components/LgNav'
-import SmNav from '@/components/SmNav'
+const LgNav = () => import('@/components/LgNav')
+const SmNav = () => import('@/components/SmNav')
 import TheFooter from '@/components/TheFooter'
 import DriftComp from '@/components/DriftComp'
 
@@ -31,18 +31,10 @@ export default {
     }
   },
   metaInfo: {
-    title: 'melsicon',
+    title: 'melsicon GmbH',
     htmlAttrs: {
-      lang: 'en'
-    },
-    meta: [
-      {
-        name: 'description',
-        content:
-          'melsicon beratet Unternhemen aus dem Bereich Transportwesen und Banking in Frankfurt und Umgebung.'
-      },
-      {property: 'og:site_name', content: 'melsicon'}
-    ]
+      lang: 'de'
+    }
   }
 }
 </script>
@@ -59,33 +51,40 @@ export default {
     position: relative
     background: $color-white
     font-family: $font-body
-    font-size: 19px
+    font-size: 20px
     height: 100%
     line-height: 1.4
     color: $color-black
+    text-size-adjust: none
     @include x-large
       font-size: 22px
     @include x-small
-      font-size: 16px
-
-  *
-    box-sizing: border-box
-    margin: 0
-    padding: 0
-
-  ::-webkit-scrollbar-thumb, ::-webkit-scrollbar
-    display: none
+      font-size: 18px
 
   a, a:visited
     text-decoration: none
-    color: $color-primary
+    color: $color-primary-darker
+    transition: transform .5s ease-in-out
+    &:hover
+      transform: scale(1.02)
+      @include small
+        transform: scale(1.01)
+
+  a:focus
+    text-decoration: underline
 
   ul
     list-style-type: none
 
-  * + *
+  *, * + *
     margin: 0
     padding: 0
+    box-sizing: border-box
+
+  button
+    background: 0
+    border: 0
+    box-shadow: 0
 
   #app
     height: 100%
@@ -102,14 +101,16 @@ export default {
     padding: 0 1em
     @include x-large
       max-width: $large-width
+    @include x-small
+      padding: 0 .6em
 
-  // SECTIONS
+  // MAIN SECTIONS
   .section
     display: flex
     flex-wrap: wrap
-    padding-bottom: 5em
+    padding-top: 5em
     @include small
-      padding-bottom: 1em
+      padding-top: 2em
 
   // HEADINGS
   .heading
@@ -119,15 +120,17 @@ export default {
     margin-bottom: .2em
     hyphens: auto
     @include small
-      font-size: 1.9em
+      font-size: 1.6em
 
   .sub-heading
     font-weight: 600
     margin-top: 1em
     margin-bottom: .2em
-    text-transform: uppercase
-    letter-spacing: 1px
     hyphens: auto
+
+  h4
+    hyphens: auto
+    font-size: 1em
 
   // CONTENT
   .article, .illustration
@@ -135,14 +138,15 @@ export default {
     @include small
       flex-basis: 100%
 
-  .article
-    padding: 1em
-    margin: 1em 0
-    @include medium
-      margin: 0
+  p:not(:last-child)
+    margin-bottom: 1em
+
+  // ILLUSTRATIONS
+  .illustration
+    padding: 0 4em
+    align-self: center
     @include small
-      flex-basis: 100%
-      padding: 1em 0
+      padding: 0 1em
 
   .illustration-medium
     float: right
@@ -154,34 +158,19 @@ export default {
     width: 100%
     max-height: 600px
 
-  p:not(:last-child)
-    margin-bottom: 1em
-
-  // BUTTON STYLES
-  button
-    background: 0
-    border: 0
-    color: $color-black
-    font-family: $font-body
-    font-size: 1em
-    cursor: pointer
-
-  .btn-cta
-    color: $color-white
-    font-weight: 600
-    padding: .5em 1.5em
-    background: $color-primary
-    border-radius: .3em
-    margin: 1em 0
-    box-shadow: .15em .15em 0 $color-primary-darker
-    &:active
-      box-shadow: .1em .1em 0 $color-white
-      transform: translate3d(.15em, .15em, 0)
-
   // LINK STYLES
   .inline-link
     color: $color-primary
     font-weight: 600
     text-decoration: none
+    cursor: pointer
+
+  img[lazy=loading]
+    opacity: 0
+
+  img[lazy=loaded]
+    opacity: 1
+    transition: all .5s ease-in
+
 
 </style>

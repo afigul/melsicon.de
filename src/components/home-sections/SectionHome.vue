@@ -4,28 +4,21 @@
         class="section section-home">
         <article class="article article-hero">
             <h1 class="main-heading">{{ $t('hero.heading') }}</h1>
-            <p class="paragraph">{{ $t('hero.description') }}</p>
         </article>
-        <illustration-hero/>
+        <!-- HERO ILLUSTRATION -->
+        <div class="illustration illustration-hero">
+            <img
+                v-lazy="$t('illustrations.hero.src')"
+                :alt="$t('illustrations.hero.desc')">
+        </div>
     </section>
 </template>
 
-<script>
-import IllustrationHero from '@/components/graphics/illustrations/IllustrationHero'
-export default {
-  name: 'Home',
-  components: {
-    IllustrationHero
-  }
-}
-</script>
-
-<style lang="sass" scoped>
+<style lang="sass">
 
   .section-home
     flex-wrap: nowrap
     align-items: center
-    padding-top: 3em
     @include small
       flex-wrap: wrap
 
@@ -35,9 +28,14 @@ export default {
     letter-spacing: 1px
     margin-bottom: .3em
     @include medium
-      font-size: 2.5em
+      padding-top: .5em
+      font-size: 2em
+    @include x-small
+      font-size: 1.5em
+
+  .illustration-hero
+    padding: 0 2em
     @include small
-      margin-top: 1em
-      font-size: 2.2em
+      padding: 0 .5em
 
 </style>
